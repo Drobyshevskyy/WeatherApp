@@ -42,9 +42,9 @@ function ChartBlock () {
         },
         layout: {
             padding: {
-                top: 20,
-                right: 20,
-                left: 20,
+                top: 25,
+                right: 25,
+                left: 25,
             }
         },
         plugins: {
