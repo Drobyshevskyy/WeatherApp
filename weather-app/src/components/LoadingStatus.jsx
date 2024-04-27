@@ -7,9 +7,12 @@ function LoadingStatus () {
     const error = useSelector(store => store.weather.error);
 
     return (
-        <div>
-            {isLoading && <AiOutlineLoading className="animate-spin w-full py-10 h-60"/>}
-        </div>
+        <>
+            {isLoading && <AiOutlineLoading className="animate-spin w-full py-10 h-[12rem] my-5"/>}
+            {error && <div className="flex place-items-center h-[12rem] my-5">
+                <p className="w-full text-lg text-white bg-red-500/50 py-5 text-center rounded-lg shadow-lg">{error}</p>
+            </div>}
+        </>
     );
 }
 

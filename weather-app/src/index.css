@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 body, :root {
-  @apply w-full h-full flex justify-center items-center main-gradient text-purple-950
+  @apply w-full h-full flex justify-center items-center main-gradient text-indigo-950
 }
 
+/* from-indigo-500 via-purple-500 to-pink-500 */
 .main-gradient {
-  @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500
+  @apply bg-gradient-to-r from-blue-300 via-indigo-300 to-violet-300 
 }

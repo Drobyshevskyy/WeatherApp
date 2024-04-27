@@ -4,7 +4,7 @@ import { WiCloud, WiCloudy, WiDayRain, WiDaySunny, WiRain, WiThunderstorm } from
 
 function Icon ({iconType}) {
 
-    let className = "w-full my-5 text-[5rem]";
+    let className = "w-full mt-1 text-[5rem]";
 
     switch(iconType) {
         case IconType.LIGHT_RAIN : return <WiDayRain  className={className}/>;
@@ -23,16 +23,16 @@ function OutputBlock () {
     const data = useSelector(store => store.weather.data);
 
     return (
-        <div className="flex justify-start gap-x-5 mt-10">
+        <div className="flex justify-start gap-x-5">
             {data?.map(item => {
                 return (
                     <div
-                    className="shadow-xl rounded-lg text-center px-5 py-2 bg-white/50"
+                    className="shadow-xl rounded-lg text-center px-5 py-2 bg-white/50 h-[11rem] w-[8rem]"
                     key={item.id}>
                         <Icon iconType={item.iconType} />
-                        <p className="p-5 pt-0 text-xl">{item.temp}&#186;C</p>
-                        <hr className="border-purple-950"/>
-                        <p className="p-5 text-base font-size-1rem">{item.time}</p>
+                        <p className="text-xl">{item.temp}&#186;C</p>
+                        <hr className="mt-2 border-purple-950"/>
+                        <p className="mt-2 text-base font-size-1rem">{item.time}</p>
                     </div>
                 )
             })}
